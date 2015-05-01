@@ -5,5 +5,9 @@ Automates installation of commonly used programs, including...
 * Installs postgres and dependencies via apt-get
 * Prompts to create password for postgres user 
 * Prompts to create password for current user
-* Installs pg gem 
+* Installs pg gem
 * Configures postgres to trust local connections (assumes this is your dev environment)
+
+## ffmpeg (install_ffmpeg.sh)
+* Builds and installs ffmpeg from source
+* Clones git repository into ~/.ffmpeg
