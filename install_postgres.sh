@@ -8,6 +8,9 @@ PG_USER="$(whoami)"
 echo "Setting password for pg user ${PG_USER}"
 echo "create user ${PG_USER}; \password ${PG_USER}; \q" | sudo -u postgres psql
 
+# Give PG_USER ability to create databases
+echo "alter user ${PG_USER} createdb; \q" | sudo -u postgres psql
+
 echo "Installing gem pg. This might take a second..."
 gem install pg
 
